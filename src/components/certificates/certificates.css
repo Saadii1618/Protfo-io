@@ -1,0 +1,55 @@
+.certificates_container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.certificate {
+    background: var(--color-primary);
+    border-radius: 2rem 2rem 2rem 2rem;
+    border: 1px solid var(--color-primary);
+    height: fit-content;
+    width:fit-content;
+    transition: var(--transition);
+    padding: 1rem;
+}
+
+.certificate:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.certificate_head h3 {
+    color: var(--color-bg);
+    font-size: 1rem;
+    text-align: center;
+}
+.certificate_head h3:hover {
+    color: var(--color-primary);
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/*============ MEDIA QUERIES (Medium Devices) ==========*/
+@media screen and (max-width: 1024px) {
+    .certificates_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .certificate{
+        height: auto;
+    }
+}
+
+/*============ MEDIA QUERIES (Small Devices) ==========*/
+@media screen and (max-width: 600px) {
+
+        .certificates_container{
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+}
